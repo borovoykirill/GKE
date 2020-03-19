@@ -28,13 +28,13 @@ Cluster orchestration with GKE
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/prod_cluster_info.png "Prod cluster-info")
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/stage_cluster_info.png "Stage cluster-info")
 
-N.B. The role the master performs from google cloud.
+**N.B. The role the master performs from google cloud.**
 
 ##### 2). Access to cluster.
 ##### To access, I used the command on the local machine:
-For prod cluster: $ gcloud container clusters get-credentials prod --zone us-central1-c --project dev-001-project <br>
-<br>
-For stage cluster: $ gcloud container clusters get-credentials stage --zone us-central1-c --project dev-001-project<br>
+*For prod cluster: $ gcloud container clusters get-credentials prod --zone us-central1-c --project dev-001-project <br>
+<br>*
+*For stage cluster: $ gcloud container clusters get-credentials stage --zone us-central1-c --project dev-001-project<br>*
 
 ##### 3). Deploy microservices: Shop-socks
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/shop_socks.png "Shop-socks")

@@ -42,10 +42,10 @@ For stage cluster:
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/shop_socks.png "Shop-socks")
 <dt>Deploy "shop-socks":</dt><br>
 <dd> 1. Apply deploy: $ kubectl apply -f complete-demo.yaml </dd>
-<dd> 3. Add FW rule: $ gcloud compute firewall-rules create node-port --allow tcp:30001 </dd>
-<dd> 4. Describe front-end services. </dd>
-<dd> 5. Connect to shop-sock via external-ip-node:30001. </dd>
-<br>
+<dd> 2. Add FW rule: $ gcloud compute firewall-rules create node-port --allow tcp:30001 </dd>
+<dd> 3. Use follow command to discover external IP for service: $ kubectl get -n sock-shop svc front-end </dd>
+<dd> 5. Connect to shop-sock via external-ip-node. </dd>
+<br> N.B. In complete-demo.yaml I change for svc front-end Type: NodePort to Type: LoadBalancer.
 
 ##### 3). Deploy microservices: Weave Scope
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/weavescope.png "Weave Scope")

@@ -17,10 +17,10 @@ Cluster orchestration with GKE
 ###### Create 2 clusters on GCP (Prod: 1 master, 3 workers, Stage: 1 master, 1 worker).
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/kube_engine.png "GKE Clusters")
 
-<br>
+
 ###### Nodes on prod cluster.
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/prod_node_role.png "Prod cluster's nodes")
-<br>
+
 ###### Nodes on stage cluster.
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/prod_node_role.png "Stage cluster's nodes")
 

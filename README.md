@@ -13,7 +13,7 @@ Cluster orchestration with GKE
 
 #### Report
 
-1.
+###### 1.
 ###### Create 2 clusters on GCP (Prod: 1 master, 3 workers, Stage: 1 master, 1 worker).
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/kube_engine.png "GKE Clusters")
 

@@ -13,7 +13,7 @@ Cluster orchestration with GKE
 
 ### Report
 
-##### 1.
+##### 1).
 ##### Create 2 clusters on GCP (Prod: 1 master, 3 workers, Stage: 1 master, 1 worker).
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/kube_engine.png "GKE Clusters")
 
@@ -30,13 +30,14 @@ Cluster orchestration with GKE
 
 N.B. The role the master performs micro service from google cloud.
 
-##### 2.
+##### 2).
 ##### To access, I used the command on the local machine:
 For prod cluster: $ gcloud container clusters get-credentials prod --zone us-central1-c --project dev-001-project <br>
 <br>
 For stage cluster: $ gcloud container clusters get-credentials stage --zone us-central1-c --project dev-001-project<br>
 
-##### 3.
+##### 3).
+![alt text](https://github.com/borovoykirill/GKE/blob/master/img/stage_cluster_info.png "Stage cluster-info")
 <dt>Deploy "shop-sock":</dt><br>
 <dd> 1. Download on my local machine deployment file - complete-demo.yaml </dd>
 <dd> 2. Apply deploy: $ kubectl apply -f complete-demo.yaml </dd>
@@ -44,5 +45,3 @@ For stage cluster: $ gcloud container clusters get-credentials stage --zone us-c
 <dd> 4. Describe front-end services. </dd>
 <dd> 5. Connect to shop-sock via <ip-clsuter>:30001. </dd>
 <br>
-##### Shop-sock:
-![alt text](https://github.com/borovoykirill/GKE/blob/master/img/stage_cluster_info.png "Stage cluster-info")

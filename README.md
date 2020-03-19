@@ -17,8 +17,18 @@ Cluster orchestration with GKE
 ###### Create 2 clusters on GCP (Prod: 1 master, 3 workers, Stage: 1 master, 1 worker).
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/kube_engine.png "GKE Clusters")
 
-###### Monitoring WEB host:
-![alt text](https://github.com/borovoykirill/DevOps-Lab/blob/Zabbix-day2/img/web-response.png "Monitoring WEB host")
+<br>
+###### Nodes on prod cluster.
+![alt text](https://github.com/borovoykirill/GKE/blob/master/img/prod_node_role.png "Prod cluster's nodes")
+<br>
+###### Nodes on stage cluster.
+![alt text](https://github.com/borovoykirill/GKE/blob/master/img/prod_node_role.png "Stage cluster's nodes")
+
+###### 2.
+###### To access, I used the command on the local machine:
+For prod cluster: $ gcloud container clusters get-credentials prod --zone us-central1-c --project dev-001-project <br>
+<br>
+For stage cluster: $ gcloud container clusters get-credentials stage --zone us-central1-c --project dev-001-project<br>
 
 ##### Home task: Monitoring JAVA VM
 

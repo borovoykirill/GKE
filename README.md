@@ -32,7 +32,7 @@ N.B. The role the master performs from google cloud.
 
 ##### 2). Access to cluster.
 ##### To access, I used the command on the local machine:
-For prod cluster:
+>For prod cluster:
 *$ gcloud container clusters get-credentials prod --zone us-central1-c --project dev-001-project <br>
 <br>*
 For stage cluster:

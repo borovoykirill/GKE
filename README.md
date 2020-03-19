@@ -28,7 +28,7 @@ Cluster orchestration with GKE
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/prod_cluster_info.png "Prod cluster-info")
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/stage_cluster_info.png "Stage cluster-info")
 
-N.B. The role the master performs from google cloud.
+>N.B. The role the master performs from google cloud.
 
 ##### 2). Access to cluster.
 ##### To access, I used the command on the local machine:
@@ -45,7 +45,8 @@ For stage cluster:
 <dd> 2. Add FW rule: $ gcloud compute firewall-rules create node-port --allow tcp:30001 </dd>
 <dd> 3. Use follow command to discover external IP for service: $ kubectl get -n sock-shop svc front-end </dd>
 <dd> 5. Connect to shop-sock via external-ip. </dd>
-<br> N.B. In complete-demo.yaml I change for svc front-end Type: NodePort to Type: LoadBalancer.
+
+>N.B. In complete-demo.yaml I change for svc front-end Type: NodePort to Type: LoadBalancer.
 
 ##### 3). Deploy microservices: Weave Scope
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/weavescope.png "Weave Scope")

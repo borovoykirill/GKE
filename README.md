@@ -44,7 +44,7 @@ For stage cluster:
 <dd> 1. Apply deploy: $ kubectl apply -f complete-demo.yaml </dd>
 <dd> 3. Add FW rule: $ gcloud compute firewall-rules create node-port --allow tcp:30001 </dd>
 <dd> 4. Describe front-end services. </dd>
-<dd> 5. Connect to shop-sock via <ip-clsuter>:30001. </dd>
+<dd> 5. Connect to shop-sock via external-ip-node:30001. </dd>
 <br>
 
 ##### 3). Deploy microservices: Weave Scope

@@ -18,13 +18,13 @@ Cluster orchestration with GKE
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/kube_engine.png "GKE Clusters")
 
 
-##### Nodes on prod cluster.
+##### Nodes on prod cluster:
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/prod_node_role.png "Prod cluster's nodes")
 
-##### Nodes on stage cluster.
+##### Nodes on stage cluster:
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/prod_node_role.png "Stage cluster's nodes")
 
-##### Сommand output - kubectl cluster-info
+##### Сommand output - kubectl cluster-info:
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/prod_cluster_info.png "Prod cluster-info")
 ![alt text](https://github.com/borovoykirill/GKE/blob/master/img/stage_cluster_info.png "Stage cluster-info")
 

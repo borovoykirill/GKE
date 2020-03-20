@@ -29,7 +29,7 @@
     - https://cloud.google.com/kubernetes-engine/docs/concepts/persistent-volumes#dynamic_provisioning </dd>
 <br>
 
-**Connected to MySQL** <br>
+**Connected to MySQL:** <br>
 ![alt text](https://github.com/borovoykirill/GKE/blob/final_day/img/db_2.png "MySQL")
 <br>
 <br>
@@ -48,5 +48,5 @@
     - https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#pod-network</dd>
 <br>
 
-**K8s cluster** <br>
+**K8s cluster:** <br>
 ![alt text](https://github.com/borovoykirill/GKE/blob/final_day/img/kub_cluster.png "K8s")

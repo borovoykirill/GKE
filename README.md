@@ -11,10 +11,12 @@
   <dd> 4. Create a report and send to siarhei_beliakou@epam.com </dd>
 <br>
 <br>
+
 **DNS records:** <br>
 ![alt text](https://github.com/borovoykirill/GKE/blob/final_day/img/GCP-DNS.png "DNS records")
 <br>
 <br>
+
 **Connected to socks-shop use DNS:** <br>
 ![alt text](https://github.com/borovoykirill/GKE/blob/final_day/img/socks-shop_dns.png "Access shop via DNS name")
 <br>

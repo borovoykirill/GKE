@@ -1,0 +1,115 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+ name: mysql-data-claim
+spec:
+ accessModes:
+ - ReadOnlyMany
+ resources:
+   requests:
+     storage: 10Gi
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql-db
+  template:
+    metadata:
+      labels:
+        app: mysql-db
+    spec:
+      containers:
+      - image: mysql:8.0.18
+        name: mysql-db
+        ports:
+        - containerPort: 3306
+        envFrom:
+        - secretRef:
+            name: mysql-secret
+        volumeMounts:
+        - name: mysql-data-claim
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-data-claim
+        persistentVolumeClaim:
+          claimName: mysql-data-claim
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: db
+spec:
+  ports:
+  - port: 3306
+    targetPort: 3306
+  type: ClusterIP
+status:
+  loadBalancer: {}
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: check-db
+  name: check-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: check-db
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: check-db
+    spec:
+      containers:
+      - image: sbeliakou/mysql-check
+        name: mysql-check
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: check-db-configmap
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: check-db-service
+spec:
+  selector:
+    app: check-db
+  ports:
+   - protocol: TCP
+     nodePort: 30080
+     port: 80
+     targetPort: 80
+  type: NodePort
+
+---
+
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: check-db-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: check-db.kbaravoy.playpit.net
+    http:
+      paths:
+      - backend:
+          serviceName: check-db-service
+          servicePort: 80

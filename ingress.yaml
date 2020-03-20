@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: socks-ingress
+  namespace: sock-shop
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: socks-shop.kbaravoy.playpit.net
+    http:
+      paths:
+      - backend:
+          serviceName: front-end
+          servicePort: 80

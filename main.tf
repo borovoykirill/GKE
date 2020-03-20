@@ -89,3 +89,9 @@ resource "google_container_node_pool" "stage" {
     ]
   }
 }
+
+resource "google_dns_managed_zone" "kbaravoy-zone" {
+  name       = "kbaravoy-zone"
+  dns_name   = "kbaravoy.playpit.net."
+  visibility = "public"
+}

@@ -1,6 +1,7 @@
 ### Kirill Baravoy
+#### Task1
 <br>
-  <dt> Task #1: </dt><br>
+  <dt> Requirements: </dt><br>
   <dd> 1. Using Terrafrom create Manages Zone {{ StudentShortName }}.playpit.net, send details to Siarhei Beliakou </dd>
   <dd> 2. Deploy Nginx Ingress Controller into GCP K8S Service (Prod or Stage you created with Terraform)
 
@@ -21,7 +22,8 @@
 ![alt text](https://github.com/borovoykirill/GKE/blob/final_day/img/socks-shop_dns.png "Access shop via DNS name")
 <br>
 <br>
-<dt> Task #2: </dt><br>
+#### Task2
+<dt> Requirements: </dt><br>
 <dd> 1. Using GCP StorageClass, create PV/PVC for MySQL (mysql:8.0.18)
 
     - https://cloud.google.com/kubernetes-engine/docs/concepts/persistent-volumes
@@ -33,7 +35,8 @@
 ![alt text](https://github.com/borovoykirill/GKE/blob/final_day/img/db_2.png "MySQL")
 <br>
 <br>
-<dt> Task #3: </dt><br>
+#### Task3
+<dt> Requirements: </dt><br>
 <dd> 1. Spin Up 2 VMs in GCP </dd>
 <dd> 2. Install Docker:
 

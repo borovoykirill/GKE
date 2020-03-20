@@ -32,7 +32,7 @@
 <br>
 
 **Connected to MySQL:** <br>
-![alt text](https://github.com/borovoykirill/GKE/blob/final_day/img/db_2.png "MySQL")
+![alt text](https://github.com/borovoykirill/GKE/blob/final_day/img/db_check.png "MySQL")
 <br>
 <br>
 #### Task3
